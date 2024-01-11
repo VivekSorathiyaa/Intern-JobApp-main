@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "914831420083",
+    "project_id": "jobapp-55512",
+    "storage_bucket": "jobapp-55512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914831420083:android:a5a84b2560646f72c51ec6",
+        "android_client_info": {
+          "package_name": "com.saumilsapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBygt1sx38k24iAwN2hdv5sx5vkJqM5uv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
