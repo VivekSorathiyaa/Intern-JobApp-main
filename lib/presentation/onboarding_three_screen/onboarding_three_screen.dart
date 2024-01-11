@@ -140,7 +140,7 @@ class OnboardingThreeScreen extends StatelessWidget {
                                                       );
                                                     },
                                                     width: 156.h,
-                                                    text: "Get Started",
+                                                    text: "Next",
                                                     margin:
                                                         EdgeInsets.only(top: 69.v),
                                                   ),
@@ -369,10 +369,10 @@ class OnboardingThreeScreen extends StatelessWidget {
                                                               builder: (context) =>
                                                                   SignUpCreateAcountScreen()));
                                                     },
-                                                    width: 101.h,
-                                                    text: "Next",
+                                                    width: 156.h,
+                                                    text: "Get Started",
                                                     margin:
-                                                        EdgeInsets.only(top: 69.v),
+                                                        EdgeInsets.only(top: 59.v),
                                                   ),
                                                 ],
                                               ),

@@ -71,7 +71,9 @@ class LoginScreen extends StatelessWidget {
                                             padding: EdgeInsets.symmetric(
                                                 vertical: 8.v),
                                             child: SizedBox(
-                                                width: 62.h, child: Divider())),
+                                                width: 40.h,
+                                                child: Divider(color:
+                                            appTheme.blueGray100))),
                                         Padding(
                                             padding:
                                                 EdgeInsets.only(left: 12.h),
@@ -104,17 +106,29 @@ class LoginScreen extends StatelessWidget {
                                                 "Don’t have an account?",
                                                 style: CustomTextStyles
                                                     .titleMediumGray500)),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapTxtLargeLabelMedium(context);
-                                            },
-                                            child: Padding(
-                                                padding:
-                                                    EdgeInsets.only(left: 2.h),
-                                                child: Text(" Sign up",
-                                                    style: theme.textTheme
-                                                        .titleMedium)))
+                                        // ),
+                                        // GestureDetector(
+                                        //     onTap: () {
+                                        //       onTapTxtLargeLabelMedium(context);
+                                        //     },
+                                        //     child: Padding(
+                                        //         padding:
+                                        //             EdgeInsets.only(left: 2.h),
+                                        //         child: Text(" Sign up",
+                                        //             style: theme.textTheme
+                                        //                 .titleMedium)))
                                       ])),
+                              GestureDetector(
+                                  onTap: () {
+                                    onTapTxtLargeLabelMedium(context);
+                                  },
+                                  child: Padding(
+                                      padding:
+                                      EdgeInsets.only(left: 2.h),
+                                      child: Text(" Sign up",
+                                          style: theme.textTheme
+                                              .titleMedium))),
+
                               SizedBox(height: 84.v),
                               Container(
                                   width: 245.h,

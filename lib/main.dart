@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart';
 import 'core/app_export.dart';
+import 'package:get/get.dart';
+
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 void main()async {
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return MaterialApp(
+        return GetMaterialApp(
           theme: theme,
           title: 'saumil_s_application',
           debugShowCheckedModeBanner: false,

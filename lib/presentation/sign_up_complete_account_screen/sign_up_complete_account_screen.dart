@@ -20,6 +20,7 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

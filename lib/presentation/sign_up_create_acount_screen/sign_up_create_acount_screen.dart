@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:saumil_s_application/core/app_export.dart';
 import 'package:saumil_s_application/widgets/app_bar/appbar_leading_image.dart';
 import 'package:saumil_s_application/widgets/app_bar/appbar_trailing_image.dart';
@@ -7,6 +8,8 @@ import 'package:saumil_s_application/widgets/custom_elevated_button.dart';
 import 'package:saumil_s_application/widgets/custom_outlined_button.dart';
 import 'package:saumil_s_application/widgets/custom_text_form_field.dart';
 
+
+import '../../controller/authController.dart';
 import '../sign_up_complete_account_screen/sign_up_complete_account_screen.dart';
 
 // ignore_for_file: must_be_immutable
@@ -16,6 +19,7 @@ class SignUpCreateAcountScreen extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  var controller = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +48,12 @@ class SignUpCreateAcountScreen extends StatelessWidget {
                               SizedBox(height: 28.v),
                               CustomOutlinedButton(
                                   text: "Continue with Google",
+                                  onPressed: (){
+                                    controller.handleSignInGoogle();
+                                  },
                                   leftIcon: Container(
                                       margin: EdgeInsets.only(right: 12.h),
+
                                       child: CustomImageView(
                                           imagePath:
                                               ImageConstant.imgGooglesymbol1,
@@ -98,18 +106,34 @@ class SignUpCreateAcountScreen extends StatelessWidget {
                               SizedBox(height: 28.v),
                               _buildInputField(context),
                               SizedBox(height: 40.v),
-                              CustomElevatedButton(
-                                  text: "Continue with Email",
-                                  onPressed: () {
-                                    onTapContinueWithEmail(context);
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              SignUpCompleteAccountScreen()),
-                                    );
-                                  }),
-                              SizedBox(height: 28.v),
+                              // CustomElevatedButton(
+                              //     text: "Continue with Email",
+                              //     onPressed: () async {
+                              //       await controller.registerWithEmailAndPassword(context);
+                              //       await onTapContinueWithEmail(context);
+                              //       Navigator.push(
+                              //         context,
+                              //         MaterialPageRoute(
+                              //             builder: (context) =>
+                              //                 SignUpCompleteAccountScreen()),
+                              //       );
+                              //     }),
+                            CustomElevatedButton(
+                              text: "Continue with Email",
+                              onPressed: () async {
+                                await controller.registerWithEmailAndPassword(context);
+                                await onTapContinueWithEmail(context);
+
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SignUpCompleteAccountScreen(),
+                                  ),
+                                );
+                              },
+                            ),
+
+                            SizedBox(height: 28.v),
                               Padding(
                                   padding:
                                       EdgeInsets.symmetric(horizontal: 40.h),
