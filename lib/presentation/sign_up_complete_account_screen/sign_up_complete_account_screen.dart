@@ -16,8 +16,6 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
 
   TextEditingController lastNameController = TextEditingController();
 
-  // TextEditingController passwordController = TextEditingController();
-
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
 
